@@ -85,6 +85,31 @@
 <body>
     <script async src="https://events.framer.com/script?v=2" data-fid="dca3802ebf6459ccbccf5e8b6dc5fafb14fcf68f6475b882a5131d289372ff99" data-no-nt></script>
     <!-- Start of bodyStart -->
+    <!-- Start of bodyStart -->
+
+<script>
+// Handle direct URL navigation for Framer exports
+(function() {
+  const path = window.location.pathname;
+  
+  // Only run if we're not on the homepage
+  if (path !== '/' && path !== '/index.html') {
+    // Wait for page to fully load
+    window.addEventListener('DOMContentLoaded', function() {
+      // Find the link that matches the current path
+      setTimeout(function() {
+        const link = document.querySelector('a[href="' + path + '"]');
+        if (link) {
+          // Simulate a click on that link to trigger Framer's router
+          link.click();
+        }
+      }, 50);
+    });
+  }
+})();
+</script>
+
+<!-- End of bodyStart -->
     
     <!-- End of bodyStart -->
     
@@ -105,3 +130,4 @@
     <!-- End of bodyEnd -->
 </body>
 </html>
+
